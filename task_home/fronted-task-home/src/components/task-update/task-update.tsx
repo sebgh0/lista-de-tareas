@@ -89,7 +89,8 @@ export class TaskUpdate {
         </div>
         <div>
           <label htmlFor="status">Estado:</label>
-          <select
+          <select 
+            class="content-select"
             id="status"
             name="status"
             onChange={(event) => this.handleSelectChange(event)}
