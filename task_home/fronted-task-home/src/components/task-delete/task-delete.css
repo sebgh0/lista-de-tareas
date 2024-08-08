@@ -1,0 +1,20 @@
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 0.5rem;
+  }
+  
+button:hover {
+    background-color: #c82333;
+    transform: translateY(-2px); /* Efecto de elevación al hover */
+  }
+  
+button:active {
+    transform: translateY(0); /* Regresa a la posición original al hacer clic */
+  }

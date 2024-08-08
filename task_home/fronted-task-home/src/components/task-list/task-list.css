@@ -1,0 +1,105 @@
+/* Estilos para el componente host */
+:host {
+  display: block;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para la lista no ordenada */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;  /* Activar Flexbox */
+  flex-wrap: wrap;  /* Permitir que los elementos se envuelvan a la siguiente línea */
+  gap: 16px;  /* Espacio entre las tarjetas de tareas */
+}
+
+/* Estilos para cada elemento de la lista (tarea) */
+li {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+  flex: 1 1 calc(33.333% - 16px);  /* Flex-grow, flex-shrink, y flex-basis */
+  min-width: 250px;  /* Ancho mínimo para evitar que se hagan demasiado estrechas */
+  max-width: calc(33.333% - 16px);  /* Ancho máximo para mantener 3 columnas en pantallas grandes */
+  box-sizing: border-box;  /* Incluir padding y border en el ancho total */
+}
+
+li:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+/* Estilos para el título de la tarea */
+li h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #333; /* Añadido para mejor contraste */
+}
+
+/* Estilos para los párrafos dentro de las tareas */
+li p {
+  font-weight: bold;
+  margin: 8px 0;
+  color: #666; /* Añadido para mejor legibilidad */
+}
+
+/* Estilos para el último párrafo ( es el estado de la tarea) */
+span, p:last-of-type {
+  
+  color: #007bff; /* Color para destacar el estado */
+}
+
+/* Estructura de la tarjeta de tarea */
+.task-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para los botones */
+button {
+  padding: 0.5rem 1rem;
+  margin: 3px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s; /* Añadido efecto de transformación */
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Efecto de elevación al hover */
+}
+
+button:active {
+  transform: translateY(0); /* Regresa a la posición original al hacer clic */
+}
+
+/* Estilos específicos para el botón de editar */
+button[onClick^="handleEditTask"] {
+  background-color: #28a745; /* Color verde para distinguir */
+}
+
+button[onClick^="handleEditTask"]:hover {
+  background-color: #218838;
+}
+
+/* Estilos para el componente de eliminación de tarea */
+task-delete {
+  margin-top: 10px; /* Espacio arriba del botón de eliminar */
+  
+}
+
+/* Estilos para el componente de actualización de tarea */
+task-update {
+  margin-bottom: 10px; /* Espacio debajo del formulario de actualización */
+  
+}
+
