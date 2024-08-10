@@ -71,27 +71,34 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local:
     ```
 
 2. **Navegar al directorio del Proyecto**:
-    ```bash
-    cd task_home/
-    ```
+    Importa el script `.sql`  
 
-3. **Ejecutar la API**:
+
+3. **Navega al directorio del backend**:
     ```bash
     cd task_api/
+    ```
+
+4. **Configurar las variables de entorno**:
+Modifica en archivo .env y edita los resultados con tu configuración de MySQL
+
+5. **Ejecutar la API**:
+    ```bash
+    
     npm run dev
     ```
 
-4. **Navegar al directorio de la interfaz**:
+6. **Navegar al directorio de la interfaz**:
     ```bash
     cd task_home/fronted-task-home/
     ```
 
-2. **Instalar dependencias**:
+7. **Instalar dependencias**:
     ```bash
     npm install
     ```
 
-3. **Ejecutar la aplicación**:
+8. **Ejecutar la aplicación**:
     ```bash
     npm start
     ```
