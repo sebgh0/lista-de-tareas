@@ -1,6 +1,8 @@
 const TaskService = require('../services/tasks.service');
 const service = new TaskService();
 
+// Controlador para crear una nueva tarea.
+// Este método maneja las solicitudes POST a la API para crear una tarea.
 const create = async (req, res) => {
     try {
         const response = await service.create(req.body);
@@ -10,6 +12,8 @@ const create = async (req, res) => {
     }
 }
 
+// Controlador para obtener todas las tareas.
+// Este método maneja las solicitudes GET a la API para obtener todas las tareas.
 const get = async ( req, res ) => {
     try {
         const response = await service.find();
@@ -19,6 +23,8 @@ const get = async ( req, res ) => {
     }
 }
 
+// Controlador para obtener una tarea específica por su ID.
+// Este método maneja las solicitudes GET a la API para obtener una tarea específica.
 const getById = async ( req, res ) => {
     try {
         const { id } = req.params;
@@ -29,6 +35,8 @@ const getById = async ( req, res ) => {
     }
 }
 
+// Controlador para actualizar una tarea existente.
+// Este método maneja las solicitudes PUT a la API para actualizar una tarea.
 const update = async (req, res) => {
     try {
         const { id } = req.params;
@@ -40,6 +48,8 @@ const update = async (req, res) => {
     }
 }
 
+// Controlador para eliminar una tarea existente.
+// Este método maneja las solicitudes DELETE a la API para eliminar una tarea.
 const _delete = async (req, res) => {
     try {
         const { id } = req.params; 

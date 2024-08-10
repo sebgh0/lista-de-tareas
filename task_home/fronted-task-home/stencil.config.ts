@@ -25,6 +25,6 @@ export const config: Config = {
   },
   devServer: {
     reloadStrategy: 'hmr',
-    port: 3334  // o cualquier otro puerto que prefieras y que no esté en uso
+    port: 3334  // o cualquier otro puerto  
   },
 };

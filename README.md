@@ -47,13 +47,18 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local:
     git clone https://github.com/sebgh0/lista-de-tareas.git
     ```
 
-2. **Ejecutar la API**:
+2. **Navegar al directorio del Proyecto**:
+    ```bash
+    cd task_home/
+    ```
+
+3. **Ejecutar la API**:
     ```bash
     cd task_api/
     npm run dev
     ```
 
-3. ****:
+4. **Navegar al directorio de la interfaz**:
     ```bash
     cd task_home/fronted-task-home/
     ```

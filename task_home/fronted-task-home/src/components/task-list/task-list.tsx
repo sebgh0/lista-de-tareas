@@ -2,10 +2,10 @@ import { Component, h, State } from '@stencil/core';
 
 // Definición de la interfaz Task para tipar los datos de las tareas
 interface Task {
-  id: number;
-  title: string;
-  description: string;
-  status: string;
+  id: number;           // Identificador único de la tarea
+  title: string;        // Título de la tarea
+  description: string;  // Descripción de la tarea
+  status: string;       // Estado de la tarea
 }
 
 @Component({
@@ -21,14 +21,14 @@ export class TaskList {
 
   // Método del ciclo de vida: se ejecuta antes de que el componente se cargue
   async componentWillLoad() {
-    await this.loadTasks();
+    await this.loadTasks(); // Carga las tareas desde la API
   }
 
   // Método para cargar las tareas desde la API
   async loadTasks() {
     const response = await fetch('http://localhost:3000/api/v1/tasks/');
     const tasks = await response.json();
-    this.tasks = tasks;
+    this.tasks = tasks;   // Actualiza el estado con las tareas cargadas
   }
 
   // Manejador para cuando se crea una nueva tarea
@@ -58,6 +58,7 @@ export class TaskList {
       <div>
         {/* Componente para crear nuevas tareas */}
         <task-create onTaskCreated={this.handleTaskCreated}></task-create>
+        <h2>Listado de Tareas</h2>
         <ul>
           {this.tasks.map(task => (
             <li key={task.id}>
