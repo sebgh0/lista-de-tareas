@@ -4,13 +4,36 @@
 
 Este proyecto es una aplicación de gestión de tareas desarrollada con StencilJS y TypeScript. La aplicación permite a los usuarios crear, actualizar y eliminar tareas. Es un ejemplo básico de una aplicación CRUD (Crear, Leer, Actualizar, Eliminar) utilizando componentes web.
 
-### Estructura del Proyecto
+## Tecnologías
+### Backend:
 
+- Node.js
+- Express
+- Sequelize (ORM para MySQL)
+
+### Frontend:
+
+- Stencil.js (para componentes web)
+- HTML/CSS
+
+## Estructura del Proyecto
+
+### Backend
+- **`src/services/tasks.service.js`**: Implementa la lógica de negocio para las tareas, incluyendo métodos para crear, leer, actualizar y eliminar tareas.
+- **`src/routes/tasks.routes.js`**: Define las rutas de la API REST para las tareas.
+- **`src/routes/index.js`**: Configura las rutas de la API.
+- **`src/db/config.js`**: Configura la conexión a la base de datos utilizando Sequelize.
+- **`src/db/models/task.model.js`**: Define el modelo de datos para las tareas.
+- **`src/db/models/index.js`**: Configura los modelos de Sequelize.
+- **`src/index.js`**: Configura y arranca el servidor Express.
+
+### Frontend
 - **`task-create.tsx`**: Componente para crear nuevas tareas.
 - **`task-list.tsx`**: Componente que muestra la lista de tareas y permite editarlas o eliminarlas.
 - **`task-update.tsx`**: Componente para actualizar una tarea existente.
-- **`task-delete.tsx`**: Componente para eliminar una tarea.
-- **`header-component.tsx`**: Componente del encabezado que se incluye en todas las páginas.
+- **`task-delete.tsx`**: Componente para eliminar tareas.
+- **`task-header.tsx`**: Componente del encabezado de la aplicación
+- **`index.html`**: Página principal que incluye los componentes de Stencil y carga los archivos JavaScript necesarios.
 
 ## Uso
 
